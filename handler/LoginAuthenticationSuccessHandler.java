@@ -17,7 +17,7 @@ public class LoginAuthenticationSuccessHandler implements AuthenticationSuccessH
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
         SecurityUtil.setResponseCorsHeader(request, response);
-        KbcResponse resp = new KbcResponse("登录成功");
+        KbcResponse resp = new KbcResponse("认证成功");
         response.getWriter().write(new ObjectMapper().writeValueAsString(resp));
     }
 }
