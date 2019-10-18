@@ -63,7 +63,7 @@ wangyanan
 
 不拦截："/login" , HttpMethod.OPTIONS
 
-## 初始登录接口
+## 登陆接口
 
 url: http://localhost:9080/login
 
@@ -75,4 +75,22 @@ form表单提交， method: post
 | -------- | ------ | ------ | ------ |
 | username | 用户名 | String | 无     |
 | password | 密码   | String | 无     |
+
+## 工具类
+
+##  SecurityUtil
+
+包名：
+
+```java
+com.k2data.kbc.security.login.util
+```
+
+函数：
+
+```java
+SecurityUtil.getUserName() 获取当前登陆用户名
+SecurityUtil.encodePassword("1234") 密码加密
+SecurityUtil.passwordMatchs("原文", "密文") 返回boolean, 密码原文和密文匹配，多用于密码校验
+```
 
