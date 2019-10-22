@@ -17,7 +17,7 @@ public class LoginAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
         SecurityUtil.setResponseCorsHeader(request, response);
-        KbcResponse resp = new KbcResponse("请重新登陆");
+        KbcResponse resp = new KbcResponse("请重新登录");
         response.setStatus(401);
         response.getWriter().write(new ObjectMapper().writeValueAsString(resp));
     }

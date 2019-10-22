@@ -4,23 +4,23 @@
 
 基于spring security的登陆功能
 
-- 登陆成功：
+- 登录成功：
 
   statusCode: 200
 
-  message: 认证成功
+  message: 登录成功
 
-- 登陆失败：
+- 登录失败：
 
   statusCode: 403
 
   message: 认证失败
 
-- 登陆超时：
+- 登录超时：
 
   statusCode: 401
 
-  message: 请重新登陆
+  message: 请重新登录
 
 - 权限不足：
 
@@ -32,7 +32,7 @@
 
   statusCode: 200
 
-  message: 退出登陆
+  message: 退出登录
 
 ## 维护者
 
@@ -63,7 +63,7 @@ wangyanan
 
 不拦截："/login" , HttpMethod.OPTIONS
 
-## 登陆接口
+## 登录接口
 
 url: http://localhost:9080/login
 
@@ -89,7 +89,7 @@ com.k2data.kbc.security.login.util
 函数：
 
 ```java
-SecurityUtil.getUserName() 获取当前登陆用户名
+SecurityUtil.getUserName() 获取当前登录用户名
 SecurityUtil.encodePassword("1234") 密码加密
 SecurityUtil.passwordMatchs("原文", "密文") 返回boolean, 密码原文和密文匹配，多用于密码校验
 ```
